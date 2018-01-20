@@ -21,5 +21,15 @@ from django.conf.urls import url, include
 urlpatterns = [
     url(r'^admin', admin.site.urls),
     url(r'^blogs', views.blog_index),
-    url(r'^$', views.default_index, name="index"),
+    url(r'^index.html', views.default_index),
+    url(r'^$', views.default_index),
+    url(r'^charts.html', views.charts_index),
+    url(r'^tables.html', views.tables_index),
+    url(r'blank.html', views.blank),
+    url(r'cards.html', views.cards),
+    url(r'forgot-password.html',views.forgot_password),
+    url(r'login.html', views.login),
+    url(r'navbar.html', views.navbar),
+    url(r'register.html', views.register),
+
 ]
