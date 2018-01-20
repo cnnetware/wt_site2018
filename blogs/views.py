@@ -5,5 +5,7 @@ from blogs.models import BlogsPost
 
 def blog_index(request):
     blog_list = BlogsPost.objects.all()
-    return render(request, 'index.html',{'blog_list':blog_list})
+    return render(request, 'blog_index.html', {'blog_list':blog_list})
 
+def default_index(request):
+    return render(request, "index.html")
