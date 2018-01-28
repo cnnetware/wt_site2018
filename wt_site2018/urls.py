@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blogs import views
+from blogs import views as views
 from django.conf.urls import url, include
+from user_manager import views as user_manager_views
 
 urlpatterns = [
     url(r'^admin', admin.site.urls),
@@ -31,5 +32,5 @@ urlpatterns = [
     url(r'login.html', views.login),
     url(r'navbar.html', views.navbar),
     url(r'register.html', views.register),
-
+    url(r'menu_tables.html', user_manager_views.user_getall),
 ]

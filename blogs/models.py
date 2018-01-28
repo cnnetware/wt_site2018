@@ -13,3 +13,5 @@ class BlogsPost(models.Model):
 
     class Meta:
         ordering=['-createdate']
+
+
